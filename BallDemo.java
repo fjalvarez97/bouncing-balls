@@ -33,11 +33,12 @@ public class BallDemo
 
         // draw the ground
         myCanvas.drawLine(50, ground, 550, ground);
-
+        Random numRandom = new Random();
         // crate and show the balls
 
         for (int i = 0; i < ballsNumber; i++){
-            BouncingBall ball = new BouncingBall(50, 50, 16, Color.BLUE, ground, myCanvas);
+            int diameter = numRandom.nextInt(40)+5;
+            BouncingBall ball = new BouncingBall(50, 50, diameter, Color.BLUE, ground, myCanvas);
             ball.draw();   
             balls.add(ball);
         }
