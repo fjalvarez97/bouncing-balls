@@ -38,7 +38,11 @@ public class BallDemo
 
         for (int i = 0; i < ballsNumber; i++){
             int diameter = numRandom.nextInt(40)+5;
-            BouncingBall ball = new BouncingBall(50, 50, diameter, Color.BLUE, ground, myCanvas);
+            int red = numRandom.nextInt(256);
+            int green = numRandom.nextInt(256);
+            int blue = numRandom.nextInt(256);
+            Color color = new Color (red, green, blue);
+            BouncingBall ball = new BouncingBall(50, 50, diameter, color, ground, myCanvas);
             ball.draw();   
             balls.add(ball);
         }
